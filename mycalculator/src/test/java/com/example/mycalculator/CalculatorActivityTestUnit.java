@@ -20,7 +20,7 @@ public class CalculatorActivityTestUnit {
     public void init(){
         activityController= Robolectric.buildActivity(CalculatorActivity.class);
     }
-
+//TODO please move activity methods in init-method
     @Test
     public void testCalculator() {
         activityController.create();
