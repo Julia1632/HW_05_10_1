@@ -19,6 +19,13 @@ public class CalculatorActivityTestUnit {
     @Before
     public void init(){
         activityController= Robolectric.buildActivity(CalculatorActivity.class);
+        activityController.create().start().resume().visible();
+        assertEquals(activityController.get().findViewById(R.id.button_eq_button).hasOnClickListeners(),true);
+        assertEquals(activityController.get().findViewById(R.id.button_plus_button).hasOnClickListeners(),true);
+        assertEquals(activityController.get().findViewById(R.id.button_minus_button).hasOnClickListeners(),true);
+        assertEquals(activityController.get().findViewById(R.id.button_mult_button).hasOnClickListeners(),true);
+        assertEquals(activityController.get().findViewById(R.id.button_minus_button).hasOnClickListeners(),true);
+
     }
 //TODO please move activity methods in init-method
     @Test
